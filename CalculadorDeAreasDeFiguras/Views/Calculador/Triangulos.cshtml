@@ -1,0 +1,22 @@
+﻿@model CalculadorDeAreasDeFiguras.Models.Figura
+
+@{
+    ViewBag.Title = "Triangulos";
+}
+
+<h2>Triangulos</h2>
+
+
+@using (Html.BeginForm("Triangulos", "Calculador", FormMethod.Post)) 
+{
+        @Html.LabelFor(@model => @model.bases, "Base");
+        @Html.TextBoxFor(model => @model.bases);
+    <br />
+    
+        @Html.LabelFor(@model => @model.altura, "Altura");
+        @Html.TextBoxFor(model => @model.altura);    
+    <br />
+    
+        <button type="submit">Operar</button>        
+        
+}

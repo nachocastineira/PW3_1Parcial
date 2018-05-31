@@ -1,0 +1,20 @@
+﻿@model CalculadorDeAreasDeFiguras.Models.Figura
+
+@{
+    ViewBag.Title = "Cuadrados";
+}
+
+
+@using (Html.BeginForm("Cuadrados", "Calculador", FormMethod.Post)) 
+{
+        @Html.LabelFor(@model => @model.bases, "Base");
+        @Html.TextBoxFor(model => @model.bases);
+    <br />
+    
+        @Html.LabelFor(@model => @model.altura, "Altura");
+        @Html.TextBoxFor(model => @model.altura);
+    <br />
+    
+        <button type="submit">Operar</button>        
+        
+}

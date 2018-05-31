@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Resultados";
+}
+
+<table>
+    <tr>
+        <th>Calculo</th>
+        <th>Figura</th>
+        <th>Base</th>
+        <th>Altura</th>
+        <th>=</th>
+        <th>Resultado</th>
+
+    </tr>
+
+
+     @foreach(var r in ViewBag.resultados)
+     {
+
+        <tr>
+
+        <td>Calculo</td>
+        <td>@r.tipoFigura</td>
+        <td>@r.bases</td>
+        <td>@r.altura</td>
+        <td>=</td>
+        <td>@r.resultado</td>
+
+        </tr>  
+    }
+
+</table>
+
+    <a href="~/Principal/Bienvenido">Volver a la Pagina Principal</a>
