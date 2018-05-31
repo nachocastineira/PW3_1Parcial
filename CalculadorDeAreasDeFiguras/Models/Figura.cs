@@ -10,13 +10,14 @@ namespace CalculadorDeAreasDeFiguras.Models
     {
         [Required]
         [Range(1, 99)]
-        public int bases;
+        public int bases { get; set; }
 
         [Required]
         [Range(1, 99)]
-        public int altura;
+        public int altura { get; set; }
 
-        public string tipoFigura;
-        public int resultado;
+        public string tipoFigura { get; set; }
+
+        public int resultado { get; set; }
     }
 }

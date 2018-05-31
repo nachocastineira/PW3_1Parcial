@@ -1,6 +1,9 @@
-﻿
+﻿@model CalculadorDeAreasDeFiguras.Models.Figura
+@using CalculadorDeAreasDeFiguras.Models
+
 @{
     ViewBag.Title = "Resultados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <table>
@@ -14,20 +17,37 @@
 
     </tr>
 
+    @{
+        int posicion = 0;
+    }
 
-     @foreach(var r in ViewBag.resultados)
-     {
+    @foreach (Figura fig in ViewBag.resultados)
+    {
+        if (posicion == ViewBag.resultados.Count - 1)
+        {
+            <tr class="negrita">
+                <td>Calculo</td>
+                <td>@fig.tipoFigura</td>
+                <td>@fig.bases</td>
+                <td>@fig.altura</td>
+                <td>=</td>
+                <td>@fig.resultado</td>
+            </tr>
+        }
 
-        <tr>
+        else
+        {
+            <tr>
+                <td>Calculo</td>
+                <td>@fig.tipoFigura</td>
+                <td>@fig.bases</td>
+                <td>@fig.altura</td>
+                <td>=</td>
+                <td>@fig.resultado</td>
+            </tr>
+        }
 
-        <td>Calculo</td>
-        <td>@r.tipoFigura</td>
-        <td>@r.bases</td>
-        <td>@r.altura</td>
-        <td>=</td>
-        <td>@r.resultado</td>
-
-        </tr>  
+        posicion += 1;
     }
 
 </table>

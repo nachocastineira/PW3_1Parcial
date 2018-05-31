@@ -10,30 +10,30 @@ namespace CalculadorDeAreasDeFiguras.Services
     {
         public static List<Figura> resultados = new List<Figura>();
 
-        public Figura calcularCuadrado (Figura f)
+        public Figura CalcularCuadrado (Figura f)
         {
            f.tipoFigura = "Cuadrado";
            f.resultado = f.bases * f.altura;
             
-           return (f);
+           return f;
         }
 
-        public Figura calcularTriangulo (Figura f)
+        public Figura CalcularTriangulo (Figura f)
         {
             f.tipoFigura = "Triangulo";
             f.resultado = (f.bases * f.altura)/2;
 
-            return (f);
+            return f;
         }
 
 
-        public void agregarResultado (Figura f)
+        public void AgregarResultado (Figura f)
         {
             resultados.Add(f);
         }
 
 
-         public List<Figura> listar()
+         public List<Figura> Listar()
         {
             return resultados;
          

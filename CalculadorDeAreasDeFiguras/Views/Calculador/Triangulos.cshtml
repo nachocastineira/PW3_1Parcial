@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Triangulos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Triangulos</h2>
@@ -9,12 +10,12 @@
 
 @using (Html.BeginForm("Triangulos", "Calculador", FormMethod.Post)) 
 {
-        @Html.LabelFor(@model => @model.bases, "Base");
-        @Html.TextBoxFor(model => @model.bases);
+        @Html.LabelFor(@model => model.bases, "Base");
+        @Html.TextBoxFor(model => model.bases);
     <br />
     
-        @Html.LabelFor(@model => @model.altura, "Altura");
-        @Html.TextBoxFor(model => @model.altura);    
+        @Html.LabelFor(@model => model.altura, "Altura");
+        @Html.TextBoxFor(model => model.altura);    
     <br />
     
         <button type="submit">Operar</button>        

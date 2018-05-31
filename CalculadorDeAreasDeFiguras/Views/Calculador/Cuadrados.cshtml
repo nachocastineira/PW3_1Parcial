@@ -2,19 +2,19 @@
 
 @{
     ViewBag.Title = "Cuadrados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 @using (Html.BeginForm("Cuadrados", "Calculador", FormMethod.Post)) 
 {
-        @Html.LabelFor(@model => @model.bases, "Base");
-        @Html.TextBoxFor(model => @model.bases);
+        @Html.LabelFor(@model => model.bases, "Base");
+        @Html.TextBoxFor(model => model.bases);
     <br />
     
-        @Html.LabelFor(@model => @model.altura, "Altura");
-        @Html.TextBoxFor(model => @model.altura);
+        @Html.LabelFor(@model => model.altura, "Altura");
+        @Html.TextBoxFor(model => model.altura);
     <br />
     
-        <button type="submit">Operar</button>        
-        
+        <button type="submit">Operar</button>                
 }

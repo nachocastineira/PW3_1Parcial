@@ -32,10 +32,10 @@ namespace CalculadorDeAreasDeFiguras.Controllers
         {
             if (ModelState.IsValid)
             {
-                c = calculadorServices.calcularCuadrado(c);
-                calculadorServices.agregarResultado(c);
+                c = calculadorServices.CalcularCuadrado(c);
+                calculadorServices.AgregarResultado(c);
 
-                ViewBag.resultados = calculadorServices.listar();
+                ViewBag.resultados = calculadorServices.Listar();
 
                 return View("Resultados");
             }
@@ -54,10 +54,10 @@ namespace CalculadorDeAreasDeFiguras.Controllers
 
             if (ModelState.IsValid)
             {
-                t = calculadorServices.calcularTriangulo(t);
-                calculadorServices.agregarResultado(t);
+                t = calculadorServices.CalcularTriangulo(t);
+                calculadorServices.AgregarResultado(t);
 
-                ViewBag.resultados = calculadorServices.listar();
+                ViewBag.resultados = calculadorServices.Listar();
 
                 return View("Resultados");
             }
